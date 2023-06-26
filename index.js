@@ -23,4 +23,45 @@ function writeToFile(fileName, answers) {
     svgString += `<text x="150" y="120" font-size="40" text-anchor="middle" fill="${answers.textColor}">${answers.text}</text>`;
     svgString += "</g>";
     svgString += "</svg>";
+
+    fs.writeFile(fileName, svgString, (err) => {
+        err ? console.log(err) : console.log("Generated logo.svg");
+    });
 }
+
+function promptUser() {
+    inquirer 
+        .prompt([
+            {
+                type: "input",
+                message: "Enter desired text for the logo to display (up to 3 characters)",
+                name:"text",
+            },
+            {
+                type: "input",
+                message: "Choose the desired color for the text (keyword OR hexadecimal number)",
+                name:"text",
+            },
+            {
+                type: "list",
+                message: "Choose which shape your logo will be",
+                choices: ["Square", "Circle", "Triangle"],
+                name:"shape",
+            },
+            {
+                type: "input",
+                message: "Choose the desired color for the logo shape (keyword OR hexadecimal number)",
+                name:"backgroundColort",
+            },
+        ])
+        .then((answers) => {
+            if (answers.text.length > 3) {
+                console.log("Text entered must be no more than 3 characters");
+                promptUser();
+            } else {
+                writeToFile("logo.svg", answers);
+            }
+        });
+}
+
+promptUser();
