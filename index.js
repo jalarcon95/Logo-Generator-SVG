@@ -11,16 +11,16 @@ function writeToFile(fileName, answers) {
     let shapeChoice;
     if (answers.shape === "Square") {
         shapeChoice = new Square();
-        svgString += `<rect x="75" y="40" width="160" height="160" fill="${answers.shapeColor}"/>`;
+        svgString += `<rect x="75" y="40" width="150" height="150" fill="${answers.shapeColor}"/>`;
     } else if (answers.shape === "Circle") {
         shapeChoice = new Circle();
-        svgString += `<circle cx="150" y="110" r="75" fill="${answers.shapeColor}"/>`;
+        svgString += `<circle cx="150" y="115" r="82" fill="${answers.shapeColor}"/>`;
     } else {
         shapeChoice = new Triangle();
-        svgString += `<polygon points="150, 20 250, 180 50, 180" fill="${answers.shapeColor}"/>`;
+        svgString += `<polygon points="150, 30 240, 180 60, 180" fill="${answers.shapeColor}"/>`;
     }
 
-    svgString += `<text x="150" y="120" font-size="40" text-anchor="middle" fill="${answers.textColor}">${answers.text}</text>`;
+    svgString += `<text x="150" y="130" font-size="45" text-anchor="middle" fill="${answers.textColor}">${answers.text}</text>`;
     svgString += "</g>";
     svgString += "</svg>";
 
