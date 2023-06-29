@@ -1,4 +1,4 @@
-# SVG-Logo-Maker
+# Logo-Generator-SVG
 
   ![badge](https://img.shields.io/badge/license-mit-blue)
     
@@ -23,15 +23,18 @@
 
   The user will run the node command to prompt questions pertaining to each section of the SVG file. Once all sections are completed, a logo.svg file will be generated with the input created by the user through the terminal. This SVG will render the proper text, shape, and color from the user input. The SVG file will be a total pixel size of 300x200.
 
+  App Demo Link: https://drive.google.com/file/d/1_ew4aVesfla5pYbYt5CqtHyE2Pwma7_u/view
+
   ## [Credits](#table-of-contents)
 
   John Alarcon || GitHub: https://github.com/jalarcon95
 
   ## [Testing](#table-of-contents)
 
-  This project also includes a test suite that allows the user to run tests to verify that the proper shape and color is generated. For unit testing, the user must run the 'npm test' command in the terminal.  
+  This project also includes a test suite that allows the user to run tests to verify that the proper shape and color is generated. For unit testing, the user must run the 'npm test' command in the terminal.
 
-  
+  Unit Testing Link: https://drive.google.com/file/d/1vpBwByU5Me5-mhRI7O8WFkEb3k0AIXnO/view  
+
   ## [License](#table-of-contents)
     
   The application is covered under the following license:
